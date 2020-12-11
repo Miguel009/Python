@@ -75,3 +75,100 @@ print(mensaje)
 #forma formateada
 msg = f'{uno} [{dos}] es programador'
 print(msg)
+
+#metodos de un string
+
+clases = "python para principiantes"
+#aqui lo que podemos ver es el tamañao del string
+print(len(clases))
+#hacerlo mayusculas
+print(clases.upper())
+#hacerlo minusculas
+print(clases.lower())
+#aqui esta nos ayuda a buscar letras en nuestra cadena y obtenemos el index de esa palabra esta es CASESENSITIVE es decir hace diferencias entre mayusculas y minusculas
+#ademas si colocamos una palabra  por ejemplo para agarra el index a donde inicia la palabra
+print(clases.find('p'))
+print(clases.find('para'))
+#este replace nos permite cambiar una palabra o un caracter por otra
+print(clases.replace('para', 'poro'))
+#esto lo que nos permite es verificar si una palabra existe en nuestro caracteres y devolvera ya sea true o false obviamente tambien es casesensitive
+print('python' in clases)
+
+#-------------------------------------------------OPERACIONES ARITMETICAS---------------------------------------------------
+print(10 +3)
+print(10-3)
+print(10*6)
+#para la division existen dos formas de realizarse
+print(10/3) #este devuelve un float
+print(10//3) #este devuelve solo el entero
+print(10 %3) #aqui obtenemos el residuo de la division
+print(10**3) #aqui es la potencia es decir 10^3
+x=10
+x=x+3
+x+=3 #aqui se esta haciendo lo mismo que en la linea 107 y se puede tambien hacer esto mismo al restar -= asi o multiplica *= asi
+print(x)
+
+#/*************************************************PRESEDENCIA DE OPERADORES***********************************************************
+y= 10 + 3 * 2 #aqui se va a ejecutar primero la multiplicacion porque es el que tiene pioridad
+print(y)
+#pioridades
+#parentesis
+#exponenciales
+#multiplicacion o division
+#suma y resta
+
+#****************************************************FUNCIONES MATEMATICAS**********************************************************
+x=2.9
+#esta funcion nos permite redondear un numero
+print(round(x))
+#aqui retorna un numero positivo siempre
+print(abs(-2.9))
+#aqui para usar muchas otras opciones tenemos que importar la libreria o modulo que trae python que en este caso se llama math
+import math
+#obtenemos el cielo de este numero en este caso 3
+print(math.ceil(2.9))
+#con esta obtenemos lo mas bajo o mejor dicho el entero menor del numero
+print(math.floor(2.9))
+
+#********************************************************IF*************************************************************
+
+is_hot = True
+is_cold = False
+if is_hot:
+    print("Es un dia muy caliente")#AQUI TIENE QUE ESTA DE ESTA MANERA
+    print("Es un dia muy caliente PAPA")
+#aqui ya es como un else if
+elif is_cold:
+    print("Dia de chill PA PA")
+else:
+    print("Que buen dia")
+#YA QUE SI LO DEJAMOS ASI YA NO ESTA DENTRO DE NUESTRO IF
+print(f"Ten un buen dia {is_hot}")
+
+#****************************************************OPERADORES LOGICOS***************************************
+
+pose_dinero=True
+pose_credito=True
+#aqui el and se escribe asi literalmente para hacer lo de Si esto se cumple y esto tambien entonces pasa
+if pose_credito and pose_credito:
+    print("Si puede obtener")
+#aqui asi es la manera de colocara el or
+if pose_credito or pose_credito:
+    print("Si puede obtener")
+#para hacer el inverso entonces se utiliza el not
+if pose_credito or not pose_credito:
+    print("Si puede obtener")
+
+#****************************************************OPERADORES MATEMATICOS COMPARACION***********************
+temp=30
+# operadores > == >= <= !=
+if temp>=30:
+    print("Haceee calor")
+else:
+    print("No Hacee calorr")
+
+#****************************************************WHILE LOOPS*************************************************
+i = 1
+while i<=5:
+    print("*"*i)
+    i+=1
